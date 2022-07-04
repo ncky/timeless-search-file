@@ -40,11 +40,8 @@ class TradeSearch:
         filterstring = ""
 
         jsonstringany = {"query":{"status":{"option":"any"},"stats":[{"type":"count","filters":[{"id":currentjewel_ids[3],"value":{"min":seed,"max":seed},"disabled":False}, {"id":currentjewel_ids[0],"value":{"min":seed,"max":seed},"disabled":False}, {"id":currentjewel_ids[1],"value":{"min":seed,"max":seed},"disabled":False}, {"id":currentjewel_ids[2],"value":{"min":seed,"max":seed},"disabled":False}],"value":{"min":1}}]},"sort":{"price":"asc"}}
-        jsonstringonline = {"query":{"status":{"option":"online"},"stats":[{"type":"count","filters":[{"id":currentjewel_ids[3],"value":{"min":seed,"max":seed},"disabled":False}, {"id":currentjewel_ids[0],"value":{"min":seed,"max":seed},"disabled":False}, {"id":currentjewel_ids[1],"value":{"min":seed,"max":seed},"disabled":False}, {"id":currentjewel_ids[2],"value":{"min":seed,"max":seed},"disabled":False}],"value":{"min":1}}]},"sort":{"price":"asc"}}
-
 
         ra = requests.post('https://www.pathofexile.com/api/trade/search/'+leaguename, json=jsonstringany, headers=headers)
-        ro = requests.post('https://www.pathofexile.com/api/trade/search/'+leaguename, json=jsonstringonline, headers=headers)
 
         if ra.status_code == 200 :
             webbrowser.open_new(f"https://www.pathofexile.com/trade/search/{leaguename}/{ra.json()['id']}")

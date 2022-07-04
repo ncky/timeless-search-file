@@ -24,26 +24,6 @@ def check_notables(notable_list, seed, jeweltype, full): #takes a list of notabl
             temp_list.append(s.search(jeweltype, node, seed))
     return temp_list
 
-# jewel_sockets = list(s.data.jewel_node_link.keys())
-
-
-
-
-
-# for socket in s.data.jewel_node_link:
-#     for node in socket:
-#         for seed in range(s.data.jewels[jeweltype]["minSeed"],s.data.jewels[jeweltype]["maxSeed"],s.data.jewels[jeweltype]["seedIncrement"]):
-#             s.search(jeweltype, node, seed)
-
-
-
-# for jewelsock in range(0, 1):#len(jewel_sockets)): #for each jewel socket
-#     for seed in range(s.data.jewels[jeweltype]["minSeed"],s.data.jewels[jeweltype]["maxSeed"],s.data.jewels[jeweltype]["seedIncrement"]):#for each seed
-#     # for seed in range(s.data.jewels[jeweltype]["minSeed"],s.data.jewels[jeweltype]["minSeed"]+1):
-#         for node in s.data.jewel_node_link[jewel_sockets[2]]:
-#             if node in s.data.node_indices_graphid: #is notable
-#                 #print(f"search({jeweltype},{s.data.node_indices_graphid[node]['Name']},{seed})\t:\t{s.search(jeweltype, node, seed)}")
-#                 s.search(jeweltype, node, seed)
 
 
 type_list = list(s.data.jewels)
@@ -64,7 +44,7 @@ layout = [  [sg.Listbox(values=jewel_list, size=(8, 22),enable_events=True, key=
 #Draw the window
 window = sg.Window('Timeless Jewels', layout, size=(800,600))
 
-#Define what happens when the button is clicked
+
 while True:
     event, values = window.read()
     if event in (sg.WIN_CLOSED, 'Exit'):
