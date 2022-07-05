@@ -15,7 +15,7 @@ class TradeSearch:
         restraint_ids = ["explicit.pseudo_timeless_jewel_nasima", "explicit.pseudo_timeless_jewel_asenath", "explicit.pseudo_timeless_jewel_deshret", "explicit.pseudo_timeless_jewel_balbala"]
         hubris_ids = ["explicit.pseudo_timeless_jewel_chitus", "explicit.pseudo_timeless_jewel_victario", "explicit.pseudo_timeless_jewel_cadiro", "explicit.pseudo_timeless_jewel_caspiro"]
         pride_ids = ["explicit.pseudo_timeless_jewel_rakiata", "explicit.pseudo_timeless_jewel_kiloava", "explicit.pseudo_timeless_jewel_kaom", "explicit.pseudo_timeless_jewel_akoya"]
-        faith_ids = ["explicit.pseudo_timeless_jewel_venarius", "explicit.pseudo_timeless_jewel_avarius", "explicit.pseudo_timeless_jewel_dominus", ]
+        faith_ids = ["explicit.pseudo_timeless_jewel_venarius", "explicit.pseudo_timeless_jewel_avarius", "explicit.pseudo_timeless_jewel_dominus", "explicit.pseudo_timeless_jewel_maxarius"]
 
         leaguename = "Standard"
 
