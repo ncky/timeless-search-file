@@ -78,15 +78,16 @@ while True:
         temp_count_max = 0
         temp_seed = [0]
         stat_value = 0
-        searchfor = values['-SEARCH-']
+        searchfor = values['-SEARCH-'].split(',')
         for i in range(s.data.jewels[jeweltype]["minSeed"],s.data.jewels[jeweltype]["maxSeed"]+1, s.data.jewels[jeweltype]["seedIncrement"]):
             temp_count = 0
             temp_stat_value = 0
             temp_jewel = check_notables(get_notable_list(s.data.jewel_node_link[values['-LISTBOX-'][0]]), i, jeweltype, 1)
-            for notable in temp_jewel: 
-                if searchfor in notable['Id']:
-                    temp_count += 1
-                    temp_stat_value += int(notable['Stat1Min'])
+            for notable in temp_jewel:
+                for search in searchfor:
+                    if search in notable['Id'] and len(search)>1:
+                        temp_count += 1
+                        temp_stat_value += int(notable['Stat1Min'])
             if temp_count == temp_count_max:
                 temp_seed.append(i)
             if temp_count > temp_count_max:
